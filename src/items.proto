@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+message Bar {
+    string key = 1;
+    string name = 2;
+}
+
+message Foo {
+    oneof bar {
+        bool all_bars = 1;
+        Bar custom_bar = 2;
+    }
+}
